@@ -177,3 +177,19 @@ Considere a recorrência do MaxMin Select:
      T(n)=Θ(n^log_b(a))=Θ(n^1)=Θ(n)
 
 Portanto, a solução assintótica da recorrência é \( T(n) = O(n) \), confirmando que o algoritmo é linear em relação ao número de elementos \( n \).
+
+## Diagrama
+![Diagrama da Recursão do MaxMin Select](assets/diagrama.png)
+
+
+### Os Níveis da Árvore de Recursão e o Número de Comparações Realizadas em Cada Nível
+
+#### Níveis da Árvore:
+- **Nível 0**: O problema original.
+- **Nível 1**: A lista é dividida em duas sublistas.
+- **Nível 2 e seguintes**: Cada sublista é novamente dividida até que os casos base sejam alcançados.
+
+#### Número de Comparações:
+- **Casos Base**: Para uma sublista de um elemento, não há comparações. Para uma sublista de dois elementos, uma comparação é feita.
+- **Níveis Superiores**: Em cada nível acima dos casos base, duas comparações são feitas para cada par de sublistas: uma para determinar o menor elemento global e outra para determinar o maior elemento global.
+- **Total de Comparações**: O número total de comparações é linear em relação ao número de elementos, resultando em \( n - 2 \) comparações para uma lista de \( n \) elementos.
